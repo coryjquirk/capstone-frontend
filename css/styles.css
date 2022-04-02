@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'AGaramond-Regular';
+    src: url('./fonts/AGaramond-Regular.otf') format("opentype");
+    font-family: 'AGaramond-Bold';
+    src: url('./fonts/AGaramond-Bold.otf') format("opentype");
+ }
+
+label {
+  font-weight: 600;
+}
+body {
+  background-color: #cccccc;
+  font-family: 'AGaramond-Regular', Fallback, serif;
+  background-image: url("geometric-leaves.png");
+  background-blend-mode: lighten;
+  border-top: 5px solid #BCA4D2;;
+}
+body a {
+  color: rgb(96, 105, 102);
+}
+#registerBody,
+#landingBody,
+#plotsBody {
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#registerBody {
+  background-image: url(https://res.cloudinary.com/dgwzirogr/image/upload/v1648916731/frontendSBA/greenhouse_zzyera.jpg);
+}
+#landingBody {
+  background-image: url(https://res.cloudinary.com/dgwzirogr/image/upload/v1648916731/frontendSBA/park_krkvut.jpg);
+}
+#plotsBody {
+  background-image: url(https://res.cloudinary.com/dgwzirogr/image/upload/v1648916732/frontendSBA/ricepaddy_yatrow.jpg);
+}
+h1 {
+  padding: 15px;
+  font-family: 'AGaramond-Bold';
+  background-color: #00baff;
+}
+.mainContent {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  background-color: white;
+  border: 1px solid rgb(120, 120, 120);
+}
+form {
+    padding: 30px;
+    margin: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(	177, 255, 237, 0.75);
+}
+#plotsDiv{
+    padding: 30px;
+    margin: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(	177, 255, 237, 0.75);
+}
+#plotsDiv > table, tr, th, td{
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#sButton{
+    background-color: #003bff;
+}
+#hiddenFNError {
+  display: none;
+}
+#hiddenLNError {
+  display: none;
+}
+#hiddenEmailError {
+  display: none;
+}
+#hiddenPasswordError {
+  display: none;
+}
+#hiddenCPasswordError {
+  display: none;
+}
+#homeLauncherList{
+    margin: 0px 0px 80px 0px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+.homeLauncher{
+    width: 280px;
+    height: 40%;
+    margin: 15px auto 15px auto;
+    padding: 28px 28px 28px 28px;
+    border-radius: 12px;
+    clear: both;
+    background-color: white;
+    position: relative;
+    color: black;
+    background-image: url("./45-degree-fabric-light.png");
+    box-shadow: rgb(		255, 69, 0, 1.0) 4px -4px 0px 0px, rgb(	255, 69, 0, .8) 8px -8px 0px 0px, rgb(	255, 69, 0, .6) 12px -12px 0px 0px, rgb(	255, 69, 0, .4) 16px -16px 0px 0px;
+}
+.homeLauncher h3{
+font-size: medium;
+}
+.homeLauncher span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.homeLauncher:hover{
+    transition: 2s;
+    background-color: rgb(255, 236, 214);
+}
+.homeLauncher span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.homeLauncher:hover span {
+    padding-right: 25px;
+    color: rgb(0, 0, 0);
+}
+.homeLauncher:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.footer,
+.footer a {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(61, 61, 61);
+  color: rgb(175, 175, 175);
+  text-align: center;
+  font-family: 'Roboto';
+}
+.footer p {
+  background-color: rgba(61, 61, 61, 0.747);
+  color: white;
+  font-size: 12px;
+  line-height: 30px;
+}
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #333; 
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1; 
+    left: 50%; 
+    bottom: 100px; 
+    border: 2px solid #00baff;
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 100px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 100px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 100px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 100px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+@media screen and (min-width: 350px) {
+    .homeLauncher{
+        margin: 15px 0px 15px 0px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .homeLauncher{
+        width: 90%;
+    }
+}
