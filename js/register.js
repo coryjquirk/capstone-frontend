@@ -1,14 +1,14 @@
-let firstName = document.getElementById("formFirstName");
-let lastName = document.getElementById("formLastName");
-let email = document.getElementById("formEmailAddress");
-let Password = document.getElementById("formPassword");
-let confirmPassword = document.getElementById("formConfirmPassword");
+const firstName = document.getElementById("formFirstName");
+const lastName = document.getElementById("formLastName");
+const email = document.getElementById("formEmailAddress");
+const Password = document.getElementById("formPassword");
+const confirmPassword = document.getElementById("formConfirmPassword");
 
-let hiddenFN = document.getElementById("hiddenFNError");
-let hiddenLN = document.getElementById("hiddenLNError");
-let hiddenE = document.getElementById("hiddenEmailError");
-let hiddenPwd = document.getElementById("hiddenPasswordError");
-let hiddenCPwd = document.getElementById("hiddenCPasswordError");
+const hiddenFN = document.getElementById("hiddenFNError");
+const hiddenLN = document.getElementById("hiddenLNError");
+const hiddenE = document.getElementById("hiddenEmailError");
+const hiddenPwd = document.getElementById("hiddenPasswordError");
+const hiddenCPwd = document.getElementById("hiddenCPasswordError");
 
 let sButton = document.getElementById("sButton");
 sButton.addEventListener("click", function(e) {

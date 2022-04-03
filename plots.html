@@ -26,9 +26,40 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
 <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
 <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-<p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
           </div>
-        <table class="table">
+          <form id="plotForm">
+            <h2>Care to add a new plot?</h2>
+            <p>Please include the steward name so we know who's looking after this plot.</p>
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName">
+            <label for="cultivationStyle"></label>
+            <label for="soilType">Choose a soil type:</label>
+            <select name="soilType" id="soilType">
+                <option value="healthy soil">healthy soil</option>
+              <option value="sandy soil">sandy soil</option>
+              <option value="muddy soil">muddy soil</option>
+              <option value="gravel">gravel</option>
+              <option value="woody soil">woody soil</option>
+            </select>
+            <label for="cultivationStyle">Choose a cultivation style:</label>
+            <select name="cultivationStyle" id="cultivationStyle">
+                <option value="traditional open air">traditional open air</option>
+              <option value="covered hoop house">covered hoop house</option>
+              <option value="traditional outdoor">traditional outdoor</option>
+              <option value="outdoor raised beds">outdoor raised beds</option>
+              <option value="covered raised beds">covered raised beds</option>
+            </select>
+            <label for="slotsTaken">Slots taken</label>
+            <input type="number" name="slotsTaken" id="slotsTaken" min="1" max="500">
+            <label for="slotsTotal">Total slots</label>
+            <input type="number" name="slotsTotal" id="slotsTotal" min="1" max="500">
+            <button onClick="addTableRow()">Add table row, baby</button>
+            <button type="submit" class="btn btn-primary" id="plotSBtn">Submit</button>
+          </form>
+          <h2>Farm plots</h2>
+        <table class="table" id="plotTable">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -204,11 +235,5 @@
         </p>
       </div>
   </body>
-  <script>
-      function populateTable(){
-
-    
-      }
-      populateTable();
-  </script>
+  <script type="text/javascript" src="js/plots.js"></script>
 </html>
