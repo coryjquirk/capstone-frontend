@@ -116,12 +116,9 @@ function validatePasswords(fPassword, fconfirmPassword) {
 }
 
 function showSnackbar(name) {
-    // Get the snackbar DIV
     var snack = document.getElementById("snackbar");
     document.getElementById("snackTxt").innerText = ("Welcome, " + name + ". Take a look around.");
-    // Add the "show" class to DIV
     snack.className = "show";
   
-    // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 3000);
   }

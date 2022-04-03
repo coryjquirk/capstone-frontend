@@ -22,6 +22,8 @@
       </h1>
       <div   id="plotsDiv">
           <div>
+            <h2>Tomato plots forever</h2>
+            <img src="https://res.cloudinary.com/dgwzirogr/image/upload/v1649013338/frontendSBA/heirlooms_nta9pz.jpg" id="heirloomBoiz">
             <p>Here is some info about our plots.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
 <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
@@ -30,10 +32,14 @@
           <form id="plotForm">
             <h2>Care to add a new plot?</h2>
             <p>Please include the steward name so we know who's looking after this plot.</p>
+            <p>(as of now, this table is mostly hardcoded, and your new rows will delete upon page refresh - back end of application is under construction.)
+            </p>
             <label for="firstName">First name</label>
             <input type="text" id="firstName">
+            <div id="hiddenFNError"></div>
             <label for="lastName">Last name</label>
             <input type="text" id="lastName">
+            <div id="hiddenLNError"></div>
             <label for="cultivationStyle"></label>
             <label for="soilType">Choose a soil type:</label>
             <select name="soilType" id="soilType">
@@ -53,9 +59,10 @@
             </select>
             <label for="slotsTaken">Slots taken</label>
             <input type="number" name="slotsTaken" id="slotsTaken" min="1" max="500">
+            <div id="hiddenTakenError"></div>
             <label for="slotsTotal">Total slots</label>
             <input type="number" name="slotsTotal" id="slotsTotal" min="1" max="500">
-            <button onClick="addTableRow()">Add table row, baby</button>
+            <div id="hiddenTotalError"></div>
             <button type="submit" class="btn btn-primary" id="plotSBtn">Submit</button>
           </form>
           <h2>Farm plots</h2>
@@ -226,6 +233,7 @@
           </tbody>
         </table>
       </div>
+      <div id="snackbar"><p id="snackTxt"></p></div>
     </div>
     <div class="footer fixed-bottom">
         <p>
