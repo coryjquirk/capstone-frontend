@@ -4,6 +4,10 @@
   font-family: "AGaramond-Bold";
   src: url("./fonts/AGaramond-Bold.otf") format("opentype");
 }
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
 label {
   font-weight: 600;
@@ -13,10 +17,20 @@ body {
   font-family: "AGaramond-Regular", Fallback, serif;
   background-image: url("geometric-leaves.png");
   background-blend-mode: lighten;
-  border-top: 5px solid #bca4d2;
 }
 body a {
-  color: rgb(96, 105, 102);
+  color: rgb(71, 71, 71);
+  text-decoration: none;
+  transition: 0.3s;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+body a:hover{
+  color: white;
+  opacity: 1;
 }
 #registerBody,
 #landingBody,
@@ -42,18 +56,18 @@ h1 {
   background-color: #00baff;
 }
 .mainContent {
-  position: absolute;
-  top: 15%;
-  left: 10%;
-  background-color: white;
-  border: 1px solid rgb(120, 120, 120);
+  padding: 30px;
+  margin: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(255, 163, 128, .85);
 }
 #registrationForm {
   padding: 30px;
   margin: 100px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: rgba(177, 255, 237, 0.75);
+  background-color: rgb(255, 163, 128, .85);
 }
 #plotForm {
   padding: 15px;
@@ -72,7 +86,7 @@ input {
   margin: 100px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: rgba(177, 255, 237, 0.75);
+  background-color: rgb(255, 163, 128, .85);
 }
 #plotsDiv > table,
 tr,
@@ -99,17 +113,10 @@ td {
 #hiddenCPasswordError {
   display: none;
 }
-#homeLauncherList {
-  margin: 0px 0px 80px 0px;
-  position: absolute;
-  top: 30%;
-  left: 30%;
-}
 #orangeGrape{
   width: 280px;
   height: 40%;
   margin: 35px auto 35px auto;
-  /* padding: 28px 28px 28px 28px; */
   border: 20px white solid;
 }
 .homeLauncher {
@@ -123,10 +130,11 @@ td {
   position: relative;
   color: black;
   background-image: url("./45-degree-fabric-light.png");
-  box-shadow: rgb(255, 69, 0, 1) 4px -4px 0px 0px,
+  /* box-shadow: rgb(255, 69, 0, 1) 4px -4px 0px 0px,
     rgb(255, 69, 0, 0.8) 8px -8px 0px 0px,
     rgb(255, 69, 0, 0.6) 12px -12px 0px 0px,
-    rgb(255, 69, 0, 0.4) 16px -16px 0px 0px;
+    rgb(255, 69, 0, 0.4) 16px -16px 0px 0px; */
+    box-shadow: #000000c0 3px -3px 0px 0px, #00000059 6px -6px 0px 0px, #00000023 9px -9px 0px 0px;
 }
 .homeLauncher h3 {
   font-size: medium;

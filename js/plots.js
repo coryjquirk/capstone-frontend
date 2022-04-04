@@ -9,6 +9,106 @@ const hiddenTotalError = document.getElementById("hiddenTotalError");
 const hiddenFNError = document.getElementById("hiddenFNError");
 const hiddenLNError = document.getElementById("hiddenLNError");
 
+const plotData = [{
+    plotId: 2,
+    soilType: "sandy soil",
+    cultivationStyle: "covered hoop house",
+    steward: "Man Jay",
+    createDate: new Date('April 15, 2020 09:05:00'),
+    filled: 7,
+    available: "",
+    total: 9
+},{
+    plotId: 3,
+    soilType: "muddy soil",
+    cultivationStyle: "traditional outdoor",
+    steward: "Kate Bush",
+    createDate: new Date('May 15, 2021 08:24:00'),
+    filled: 28,
+    available: "",
+    total: 40
+},{
+    plotId: 4,
+    soilType: "sandy soil",
+    cultivationStyle: "indoor hydroponics",
+    steward: "Madeup Dude",
+    createDate: new Date('December 17, 1995 11:25:00'),
+    filled: 12,
+    available: "",
+    total: 67
+},{
+    plotId: 5,
+    soilType: "gravel",
+    cultivationStyle: "outdoor raised beds",
+    steward: "Johnny Appleseed",
+    createDate: new Date('December 17, 1995 10:20:00'),
+    filled: 1,
+    available: "",
+    total: 56
+},{
+    plotId: 6,
+    soilType: "woody soil",
+    cultivationStyle: "covered raised beds",
+    steward: "Madeup Dude",
+    createDate: new Date('March 17, 2018 10:05:00'),
+    filled: 5,
+    available: "",
+    total: 30
+},{
+    plotId: 7,
+    soilType: "woody soil",
+    cultivationStyle: "covered raised beds",
+    steward: "Johnny Appleseed",
+    createDate: new Date('May 20, 2020 09:58:00'),
+    filled: 5,
+    available: "",
+    total: 30
+},{
+    plotId: 8,
+    soilType: "woody soil",
+    cultivationStyle: "covered raised beds",
+    steward: "Man Jay",
+    createDate: new Date('June 16, 2017 10:49:00'),
+    filled: 5,
+    available: "",
+    total: 30
+},{
+    plotId: 9,
+    soilType: "healthy soil",
+    cultivationStyle: "covered raised beds",
+    steward: "Kate Bush",
+    createDate: new Date('July 18, 2019 08:24:00'),
+    filled: 5,
+    available: "",
+    total: 30
+}]
+populateTable(); //runs every time page loads.
+function populateTable(){
+    let rowCt = document.getElementById("plotTable").rows.length;
+    let plotTable = document.getElementById("plotTable");
+    for (let i = 0; i < plotData.length; i++){
+        //rowCt++ ensures each new row of data inserted below the last row added.
+        let row = plotTable.insertRow(rowCt++);
+        //creates the table cells in the new row:
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+        let cell5 = row.insertCell(4);
+        let cell6 = row.insertCell(5);
+        let cell7 = row.insertCell(6);
+        let cell8 = row.insertCell(7);
+        //populating the new cells:
+        cell1.innerHTML = "<strong>" + plotData[i].plotId +"</strong>";
+        cell2.innerHTML = plotData[i].soilType;
+        cell3.innerHTML = plotData[i].cultivationStyle;
+        cell4.innerHTML = plotData[i].steward;
+        cell5.innerHTML = plotData[i].createDate; //clean up format w/ Regex
+        cell6.innerHTML = plotData[i].filled;
+        cell7.innerHTML = plotData[i].total - plotData[i].filled; //avail plots calc on render
+        cell8.innerHTML = plotData[i].total;
+    }
+}
 let plotSBtn = document.getElementById("plotSBtn");
 plotSBtn.addEventListener("click", function(e){
     //before adding `new Number`, slotsTaken.value was being evaluated as string
